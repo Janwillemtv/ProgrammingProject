@@ -24,7 +24,7 @@ public class HotelTest {
      */
     @Before
     public void setUp() {
-        hotel = new Hotel("Fawlty Towers");
+        hotel = new Hotel("Better hotel");
         System.out.println("testchanges");
         // initialisation of password-variable
         correctPassword = Password.INITIAL;
