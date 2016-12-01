@@ -1,4 +1,5 @@
 package ss.week2.test;
+
 import ss.week2.hotel.*;
 
 
@@ -10,7 +11,9 @@ import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 import static org.junit.Assert.*;
 
 public class HotelTest {
-    /** Test variable for a <tt>Hotel</tt> object. */
+    /**
+     * Test variable for a <tt>Hotel</tt> object.
+     */
     private Hotel hotel;
     private String correctPassword;
     private String wrongPassword;
@@ -40,12 +43,12 @@ public class HotelTest {
         assertNull("No check in with wrong password", room);
     }
 
-    
+
     @Test
     public void testPassword() {
-    	assertTrue(hotel.getPassword().testWord(correctPassword));
+        assertTrue(hotel.getPassword().testWord(correctPassword));
     }
-    
+
     /**
      * checkIn must, as long as rooms are available, return a room occupied by the specified guest.
      * When the hotel is full, checkIn must return null.
