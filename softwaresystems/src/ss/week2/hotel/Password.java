@@ -16,6 +16,7 @@ public class Password {
 	public Password(Checker c) {
 		checker = c;
 		factoryPassword = checker.generatePassword();
+        passWord = factoryPassword;
 	}
 
 	public Password() {
@@ -37,8 +38,8 @@ public class Password {
 		}
 	}
 	public boolean setWord(String oldPass, String newPass) {
-		if (oldPass.equals(passWord) && acceptable(newPass)) {
-			
+		if (oldPass.equals(passWord) && checker.acceptable(newPass)) {
+			restart();
 			passWord = newPass;
 			return true;
 			
@@ -48,7 +49,11 @@ public class Password {
 		}
 	}
 
-	public Checker getChecker() {
+    public void restart() {
+
+    }
+
+    public Checker getChecker() {
 		return checker;
 	}
 
