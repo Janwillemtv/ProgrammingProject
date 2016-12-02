@@ -18,7 +18,7 @@ public class Password {
 	}
 
 	public Password() {
-		Password(week3.pw.BasicChecker);
+		Password(ss.week3.pw.Checker);
 	}
 	public boolean acceptable(String in) {
 		if (in.length() > 6 && !in.contains(" ")) {
