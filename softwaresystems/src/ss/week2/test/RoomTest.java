@@ -1,5 +1,4 @@
 package ss.week2.test;
-import ss.week2.hotel.*;
 
 import static org.junit.Assert.*;
 
@@ -28,12 +27,12 @@ public class RoomTest {
         room.setGuest(guest);
         assertEquals(guest, room.getGuest());
     }
-    
+
     @Test
     public void testSafe() {
-    	room.getSafe().getPassword().setWord("raspberry", "testing");
-    	room.getSafe().activate("testing");
-    	room.getSafe().open("testing");
-    	assertTrue(room.getSafe().isOpen());
+        room.getSafe().getPassword().setWord("raspberry", "testing");
+        room.getSafe().activate("testing");
+        room.getSafe().open("testing");
+        assertTrue(room.getSafe().isOpen());
     }
 }

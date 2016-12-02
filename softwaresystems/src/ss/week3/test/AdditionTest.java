@@ -4,8 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import ss.week3.test.Addition;
 
-import static org.junit.Assert.assertEquals;
-
 public class AdditionTest {
 
     private Addition add;
