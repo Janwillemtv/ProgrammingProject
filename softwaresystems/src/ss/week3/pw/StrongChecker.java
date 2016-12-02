@@ -3,8 +3,9 @@ package week3.pw;
 /**
  * Created by janwillem on 12/2/16.
  */
-public class StrongChecker extends BasicChecker implements ss.week3.pw.Checker{
+public class StrongChecker extends week3.pw.BasicChecker implements ss.week3.pw.Checker{
 
+    public static final String INITPASS = "Raspberry1";
     public StrongChecker(){
 
     }
@@ -23,8 +24,8 @@ public class StrongChecker extends BasicChecker implements ss.week3.pw.Checker{
         }
     }
 
-    String generatePassword(){
-        return "Raspberry1";
+    public String generatePassword(){
+        return INITPASS;
     }
 
 }

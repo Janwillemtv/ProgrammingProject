@@ -1,8 +1,8 @@
-/*package ss.week3.test;
+package ss.week3.test;
 
 import org.junit.Test;
-import ss.week3.pw.BasicChecker;
-import ss.week3.pw.TimedPassword;
+import ss.week3.pw.*;
+import ss.week2.hotel.TimePassword;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -12,7 +12,7 @@ public class TimedPasswordTest {
     @Test
     public void test() throws Exception {
         // Create new TimedPassword that is valid for one second.
-        TimedPassword tp = new TimedPassword(1);
+        TimePassword tp = new TimePassword(1);
         // Assert that it is valid.
         assertFalse("The password should not yet have expired.", tp.isExpired());
         // Sleep for 2 seconds.
@@ -27,4 +27,3 @@ public class TimedPasswordTest {
                 tp.isExpired());
     }
 }
-*/
