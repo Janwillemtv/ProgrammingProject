@@ -6,7 +6,7 @@ public interface OperatorWithIdentity {
 	 * Perform this operation with the specified operands.
 	 */
 	public int operate(int left, int right);
-	
+
 	/**
 	 * The identity for this operator. For any int i,
 	 * this.operate(this.identity, i) == i
@@ -15,3 +15,5 @@ public interface OperatorWithIdentity {
 	public int identity();
 
 }
+
+

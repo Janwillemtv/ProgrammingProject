@@ -2,7 +2,7 @@ package ss.week3.test;
 
 import org.junit.Before;
 import org.junit.Test;
-import ss.week3.Multiplication;
+import ss.week3.test.Multiplication;
 
 import static org.junit.Assert.assertEquals;
 
