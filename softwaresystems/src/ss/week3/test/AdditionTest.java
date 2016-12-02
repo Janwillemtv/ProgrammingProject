@@ -2,7 +2,7 @@ package ss.week3.test;
 
 import org.junit.Before;
 import org.junit.Test;
-import ss.week3.Addition;
+import ss.week3.test.Addition;
 
 public class AdditionTest {
 
