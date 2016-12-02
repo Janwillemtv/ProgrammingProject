@@ -1,6 +1,7 @@
 package ss.week2.hotel;
 
 import ss.week3.pw.Checker;
+import ss.week3.pw.BasicChecker;
 
 import java.util.Objects;
 
@@ -11,15 +12,16 @@ public class Password {
 	private String factoryPassword;
 	private String passWord;
 	public static final String INITIAL = "raspberry";
+
 	public Password(Checker c) {
-		//super();
 		checker = c;
 		factoryPassword = checker.generatePassword();
 	}
 
 	public Password() {
-		Password(week3.pw.BasicChecker);
+        this(new BasicChecker());
 	}
+
 	public boolean acceptable(String in) {
 		if (in.length() > 6 && !in.contains(" ")) {
 			return true;
