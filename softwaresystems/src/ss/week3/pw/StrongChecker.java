@@ -1,16 +1,16 @@
-package week3.pw;
+package ss.week3.pw;
 
 /**
  * Created by janwillem on 12/2/16.
  */
-public class StrongChecker extends week3.pw.BasicChecker implements ss.week3.pw.Checker{
+public class StrongChecker extends BasicChecker implements Checker{
 
     public static final String INITPASS = "Raspberry1";
     public StrongChecker(){
 
     }
 
-    boolean acceptable(String s){
+    public boolean acceptable(String s){
         if(s.length() >= 6 && !s.contains(" ")){
             Character c = s.charAt(0);
 

@@ -1,9 +1,9 @@
-package week3.pw;
+package ss.week3.pw;
 
 /**
  * Created by janwillem on 12/2/16.
  */
-public class BasicChecker implements ss.week3.pw.Checker{
+public class BasicChecker implements Checker{
     public static final String INITPASS = "raspberry";
 
     public BasicChecker(){

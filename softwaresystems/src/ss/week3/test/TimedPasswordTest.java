@@ -1,7 +1,7 @@
 package ss.week3.test;
 
 import org.junit.Test;
-import ss.week3.pw.*;
+import ss.week3.pw.BasicChecker;
 import ss.week2.hotel.TimePassword;
 
 import static org.junit.Assert.assertFalse;
