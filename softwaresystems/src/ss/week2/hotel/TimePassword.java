@@ -7,22 +7,29 @@ import static java.lang.System.currentTimeMillis;
  */
 public class TimePassword extends Password {
     private int validTime;
+    private long expired;
+    public static final int INITTIME = 1000;
 
     public TimePassword(int time){
         super();
-        validTime = (int) (currentTimeMillis() + time);
+        validTime = time;
+        expired =  currentTimeMillis() + validTime;
     }
 
     public TimePassword(){
-        super();
-        validTime = (int) (currentTimeMillis() + 10000);
+        this(INITTIME);
     }
 
     public boolean isExpired() {
-        if (currentTimeMillis() > validTime) {
+        if(currentTimeMillis() > expired){
             return true;
-        } else {
+        }else{
             return false;
         }
+    }
+
+    public void restart() {
+        expired = currentTimeMillis() + validTime;
+        System.out.println("yay");
     }
 }
