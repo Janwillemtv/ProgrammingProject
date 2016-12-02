@@ -6,7 +6,8 @@ import ss.week3.test.Multiplication;
 
 import static org.junit.Assert.assertEquals;
 
-public class MultiplicationTest {
+public class
+MultiplicationTest {
 
     private Multiplication mul;
 

@@ -19,9 +19,9 @@ public class TimePassword extends Password {
     }
 
     public boolean isExpired() {
-        if(currentTimeMillis() > validTime){
+        if (currentTimeMillis() > validTime) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
