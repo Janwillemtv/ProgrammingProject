@@ -24,11 +24,7 @@ public class Password {
 	}
 
 	public boolean acceptable(String in) {
-		if (in.length() > 6 && !in.contains(" ")) {
-			return true;
-		} else {
-			return false;
-		}
+		return checker.acceptable(in);
 	}
 	/*@ pure */public boolean testWord(String in) {
 		if (Objects.equals(in, passWord)) {
@@ -38,7 +34,7 @@ public class Password {
 		}
 	}
 	public boolean setWord(String oldPass, String newPass) {
-		if (oldPass.equals(passWord) && checker.acceptable(newPass)) {
+		if (oldPass.equals(passWord) && acceptable(newPass)) {
 			restart();
 			passWord = newPass;
 			return true;
