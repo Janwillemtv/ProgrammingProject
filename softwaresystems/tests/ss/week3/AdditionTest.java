@@ -1,4 +1,4 @@
-package ss.week3t;
+package ss.week3;
 
 import org.junit.Before;
 import org.junit.Test;
