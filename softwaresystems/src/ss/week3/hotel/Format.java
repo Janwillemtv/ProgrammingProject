@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
  */
 public class Format {
 
-     public void printLine(String text, double amount) {
+     public static void printLine(String text, double amount) {
         DecimalFormat formatter = new DecimalFormat("#.00");
          String format = "%-30s%s%n";
         // System.out.println(format, text, amount);
@@ -14,7 +14,7 @@ public class Format {
         //return text;
     }
     public static void main(String[] args) {
-    this.printLine("Test this", 1);
+    printLine("Test this", 1);
    // this.printLine("Hahahahahahaha", 45.12);
     }
 
