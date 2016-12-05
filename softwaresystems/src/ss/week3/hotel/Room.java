@@ -63,6 +63,7 @@ public class Room {
     	return safe;
     };
 
+
     /**
      * Returns String representation of <code>Room</code>.
      */

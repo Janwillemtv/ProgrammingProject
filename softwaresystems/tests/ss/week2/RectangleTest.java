@@ -1,8 +1,7 @@
 package ss.week2;
 
-import org.junit.*;
-
-import ss.week2.Rectangle;
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
