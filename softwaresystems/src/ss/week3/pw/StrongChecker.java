@@ -11,8 +11,7 @@ public class StrongChecker extends BasicChecker implements Checker{
     }
 
     public boolean acceptable(String s){
-        if(s.length() >= 6 && !s.contains(" ")){
-            Character c = s.charAt(0);
+        if(super.acceptable(s)) {
 
             if(Character.isLetter(s.charAt(0)) && Character.isDigit(s.charAt(s.length()-1)) ){
                 return true;

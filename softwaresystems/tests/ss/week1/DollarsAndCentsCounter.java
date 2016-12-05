@@ -1,4 +1,4 @@
-package ss.week1.test;
+package ss.week1;
 
 public class DollarsAndCentsCounter {
 	
