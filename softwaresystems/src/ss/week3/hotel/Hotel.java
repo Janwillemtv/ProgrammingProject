@@ -1,5 +1,7 @@
 package ss.week3.hotel;
 
+import java.io.PrintStream;
+
 /**
  * Hotel with rooms and Guests.
  * @author Janwillem te Voortwis
@@ -65,6 +67,26 @@ public class Hotel {
 			return room2;
 		} else {
 			//when full return null
+			return null;
+		}
+	}
+	public Bill getBill(String guestName, int noNights, PrintStream output) {
+		Room tempRoom = getRoom(guestName);
+		if (tempRoom != null) {
+			if (tempRoom instanceof PricedRoom) {
+				Bill tempBill;
+				tempBill = new Bill(output);
+				for (int i = 0; i<noNights; i++) {
+					tempBill.newItem(tempRoom);
+				}
+				if (tempRoom.getSafe().isActive()) {
+					tempBill.newItem((PricedSafe) tempRoom.getSafe());
+				}
+				return tempBill;
+			}else {
+				return null;
+			}
+		} else {
 			return null;
 		}
 	}
