@@ -5,7 +5,6 @@ import ss.week3.pw.BasicChecker;
 
 import java.util.Objects;
 
-//import java.math.*;
 public class Password {
 
 	private Checker checker;
