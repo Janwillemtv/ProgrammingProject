@@ -1,4 +1,4 @@
-/*package ss.week3.test;
+package ss.week3;
 import org.junit.Before;
 import org.junit.Test;
 import ss.week3.hotel.Bill;
@@ -28,4 +28,3 @@ public class PricedRoomTest {
         assertTrue("The price per night should be included.", item.toString().matches(PRICE_PATTERN));
     }
 }
-*/

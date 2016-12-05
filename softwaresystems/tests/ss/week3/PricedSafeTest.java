@@ -1,5 +1,5 @@
-/*
-package ss.week3.test;
+
+package ss.week3;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,4 +29,3 @@ public class PricedSafeTest {
         assertTrue("The price should be included.", item.toString().matches(PRICE_PATTERN));
     }
 }
-*/

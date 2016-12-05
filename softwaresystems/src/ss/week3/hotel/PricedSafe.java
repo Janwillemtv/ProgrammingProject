@@ -6,22 +6,14 @@ package ss.week3.hotel;
 public class PricedSafe extends Safe implements Bill.Item {
     private double price;
     public PricedSafe (double price) {
+        super();
         this.price = price;
     }
 
     @Override
     public double getAmount() {
-        return 0;
-    }
-
-   /* @Override
-    public String toString(String input) {
-        return null;
-    }
-
-    public double getAmount() {
         return price;
-    } */
+    }
 
     @Override
     public String toString() {

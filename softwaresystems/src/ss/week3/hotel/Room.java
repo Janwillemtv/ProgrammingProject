@@ -6,7 +6,7 @@ package ss.week3.hotel;
  * @author Arend Rensink
  * @version $Revision: 1.2 $
  */
-public class Room {
+public class Room implements Bill.Item{
     // ------------------ Instance variables ----------------
 
     private int number;
@@ -21,7 +21,10 @@ public class Room {
      */
     public Room(int no) {
     	number = no;
-    	safe = new Safe();
+    	this.safe = new Safe();
+    }
+    public double getAmount() {
+        return 0;
     }
 
     // ------------------ Queries --------------------------
@@ -60,7 +63,7 @@ public class Room {
      * @return the safe of this <code>Room</code>;
      */
     public Safe getSafe() {
-    	return safe;
+    	return this.safe;
     };
 
 

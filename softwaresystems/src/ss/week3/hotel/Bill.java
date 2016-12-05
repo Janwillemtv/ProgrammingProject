@@ -6,11 +6,14 @@ import java.io.PrintStream;
  */
 public class Bill {
     private Item item;
-    static Format myFormat;
+    //static Format myFormat;
+
+    private double sum;
 
     private PrintStream out;
-    public Bill() {
-        myFormat.printLine("Hi there", 76);
+    public Bill(PrintStream output) {
+        //myFormat.printLine("Hi there", 76);
+        sum = 0;
     }
     public interface Item {
 
@@ -18,6 +21,21 @@ public class Bill {
         public double getAmount();
 
     }
+    public void newItem(Item item) {
+        if (item != null) {
+            if(out != null) {
+                out.println(Format.printLine(item.toString(), item.getAmount()));
+            }
+            sum += item.getAmount();
+        }
+    }
+    public void total() {
+        if (out != null) {
+            out.println(Format.printLine("Total Price", sum));
+        }
+    }
+
     public static void main(String args[]) {
+        //myFormat.printLine("test number 2", 45.00);
     }
 }
