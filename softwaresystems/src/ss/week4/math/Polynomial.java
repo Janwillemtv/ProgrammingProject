@@ -22,8 +22,7 @@ public class Polynomial implements Function, Integrandable {
     public double apply(double d) {
         double result = 0;
 
-        for (LinearProduct p :
-                functions) {
+        for (LinearProduct p : functions) {
             result += p.apply(d);
         }
 
