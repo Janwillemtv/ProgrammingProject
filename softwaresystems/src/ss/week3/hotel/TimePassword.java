@@ -30,6 +30,5 @@ public class TimePassword extends Password {
 
     public void restart() {
         expired = currentTimeMillis() + validTime;
-        System.out.println("yay");
     }
 }

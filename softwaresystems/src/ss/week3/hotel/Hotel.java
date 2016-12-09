@@ -80,7 +80,9 @@ public class Hotel {
 					tempBill.newItem(tempRoom);
 				}
 				if (tempRoom.getSafe().isActive()) {
-					tempBill.newItem((PricedSafe) tempRoom.getSafe());
+					if(tempRoom.getSafe() instanceof PricedSafe) {
+						tempBill.newItem((PricedSafe) tempRoom.getSafe());
+					}
 				}
 				return tempBill;
 			}else {

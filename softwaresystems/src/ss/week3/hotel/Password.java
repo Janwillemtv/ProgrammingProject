@@ -19,7 +19,8 @@ public class Password {
 	}
 
 	public Password() {
-        this(new BasicChecker());
+
+		this(new BasicChecker());
 	}
 
 	public boolean acceptable(String in) {
