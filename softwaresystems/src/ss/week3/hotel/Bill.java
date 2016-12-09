@@ -18,7 +18,7 @@ public class Bill {
     public interface Item {
 
         //method returns a double
-        public double getAmount();
+         double getAmount();
 
     }
     public void newItem(Item item) {
@@ -29,13 +29,14 @@ public class Bill {
             sum += item.getAmount();
         }
     }
-    public void total() {
+    public double total() {
         if (out != null) {
-            out.println(Format.printLine("Total Price", sum));
+            System.out.println(Format.printLine("Total Price", sum));
         }
+        return sum;
     }
 
     public static void main(String args[]) {
-        //myFormat.printLine("test number 2", 45.00);
+       // Format.printLine("test number 2", 45.00);
     }
 }

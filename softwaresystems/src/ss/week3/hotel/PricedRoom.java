@@ -8,7 +8,7 @@ public class PricedRoom extends Room implements Bill.Item{
     private int roomNumber;
     private double price;
     public PricedRoom(int number, double roomPrice, double safePrice){
-    super(number/*, new PricedSafe(safePrice)*/);
+    super(number, new PricedSafe(safePrice));
        // thisSafe = new PricedSafe(safePrice);
 
         this.roomNumber = number;

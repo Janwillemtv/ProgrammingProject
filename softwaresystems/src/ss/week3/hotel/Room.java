@@ -19,9 +19,9 @@ public class Room implements Bill.Item{
      * Creates a <code>Room</code> with the given number, without a guest.
      * @param no number of the new <code>Room</code>
      */
-    public Room(int no) {
+    public Room(int no, Safe mySafe) {
     	number = no;
-    	this.safe = new Safe();
+    	this.safe = mySafe;
     }
     public double getAmount() {
         return 0;
