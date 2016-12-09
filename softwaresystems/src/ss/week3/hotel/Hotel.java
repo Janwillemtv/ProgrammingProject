@@ -18,8 +18,8 @@ public class Hotel {
 		name = n;
 		password = new Password();
 		
-		room1 = new Room(1);
-		room2 = new Room(2);
+		room1 = new Room(1, new Safe());
+		room2 = new Room(2, new Safe());
 	}
 	
 	public Room checkIn(String pass, String n) {
