@@ -21,22 +21,25 @@ public class Rectangle {
     	length = theLength;
     	width = theWidth;
     }
+    /*@ pure */ public int width() {
+        return width;
+    }
+    /*@ pure */public int length() {
+        return length;
+    }
+
     
     /**
      * The length of this Rectangle.
      */
     //@ ensures \result >= 0;
-    /*@ pure */public int length() {
-    	return length;
-    }
+
 
     /**
      * The width of this Rectangle.
      */
     //@ ensures \result >= 0;
-    /*@ pure */ public int width() {
-    	return width;
-    }
+
 
     /**
      * The area of this Rectangle.

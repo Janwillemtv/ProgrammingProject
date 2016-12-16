@@ -1,7 +1,6 @@
-/*package ss.week4;
+package ss.week4;
 
 import org.junit.Test;
-import ss.week4.MergeSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class MergeSortTest {
     @Test
     public void testMergesortEmptyList() {
-        List<Integer> sequence = new ArrayList<>(Collections.emptyList());
+        List<Integer> sequence = new ArrayList<>();
         MergeSort.mergesort(sequence);
         assertEquals(sequence, Collections.emptyList());
     }
@@ -47,4 +46,3 @@ public class MergeSortTest {
         assertEquals(sequence, Arrays.asList(1, 2, 3, 4, 5, 6));
     }
 }
-*/

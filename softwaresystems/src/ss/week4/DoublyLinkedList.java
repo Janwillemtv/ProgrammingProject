@@ -1,71 +1,110 @@
 package ss.week4;
 
-public class DoublyLinkedList<Element> {
+import java.util.AbstractList;
 
-    private /*@ spec_public @*/ int size;
-    private Node head;
+public class DoublyLinkedList<Element> extends AbstractList<Element>{
 
-    //@ ensures this.size == 0;
+    private int size;
+    private Node header;
+
     public DoublyLinkedList() {
         size = 0;
-        head = new Node(null);
-        head.next = head;
-        head.previous = head;
+        header = null;
     }
 
-    //@ requires element != null;
-    //@ requires 0 <= index && index <= this.size;
-    //@ ensures this.size == \old(size) + 1;
-    //@ ensures this.getNode(index).equals(element);
-    public void add(int index, Element element) {
-        // TODO: implement, see exercise P-4.17
+    @Override
+    public Element remove(int index) {
+        Node toRemove = getNode(index);
+        Node prev = toRemove.previous;
+        Node next = toRemove.next;
 
-    }
+        prev.next = next;
+        next.previous = prev;
 
-    //@ requires 0 <= index && index < this.size;
-    //@ ensures this.size == \old(size) - 1;
-    public void remove(int index) {
-        // TODO: implement, see exercise P-4.17
-    }
-
-    //@ requires 0 <= index && index < this.size;
-    /*@ pure */ public Element get(int index) {
-        Node p = getNode(index);
-        return p.element;
-    }
-
-    /**
-     * The node containing the element with the specified index.
-     * The head node if the specified index is -1.
-     */
-    //@ requires -1 <= i && i < this.size;
-    //@ pure
-    public Node getNode(int i) {
-        Node p = head;
-        int pos = -1;
-        while (pos < i) {
-            p = p.next;
-            pos = pos + 1;
+        if(index == 0) {
+            header = next;
         }
-        return p;
+
+        size--;
+        return toRemove.element;
     }
 
-    public int size() {
-        return this.size;
+    @Override
+    public void add(int index, Element element) {
+        Node newNode = new Node(element);
+
+        // check if there are already items in the list
+        if (size() == 0) {
+            header = newNode;
+            header.next = header;
+            header.previous = header;
+        }
+        else {
+            // check if requested index is 0 (no link to previous node possible)
+            if(index == 0) {
+                newNode.next = header;
+                newNode.previous = header.previous;
+                header.previous = newNode;
+                header = newNode;
+            }
+            else {
+                Node n = getNode(index - 1);
+                newNode.previous = n;
+                newNode.next = n.next;
+                n.next = newNode;
+            }
+        }
+
+        size++;
     }
-    public class Node {
-        public Node(Element element) {
-            this.element = element;
+
+    @Override
+    public Element get(int index) {
+        Node n = header;
+
+        for (int i = 0; i < index; i++) {
+            n = n.next;
+        }
+
+        return n.element;
+    }
+
+    public Node getNode(int index) {
+        Node n = header;
+
+        for (int i = 0; i < index; i++) {
+            n = n.next;
+        }
+
+        return n;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+
+        // return index in list
+        for (int i = 0; i < this.size(); i++) {
+            if (this.get(i).equals(o)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    private class Node {
+        Element element;
+        Node next, previous;
+
+        public Node(Element e) {
+            this.element = e;
             this.next = null;
             this.previous = null;
-        }
-
-        private Element element;
-        public Node next;
-        public Node previous;
-
-        public Element getElement() {
-            return element;
         }
     }
 }

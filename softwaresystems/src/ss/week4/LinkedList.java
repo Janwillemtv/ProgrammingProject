@@ -1,72 +1,130 @@
 package ss.week4;
 
-public class LinkedList<Element> {
+import java.util.AbstractList;
 
-    private /*@ spec_public @*/ int size;
-    private Node first;
+public class LinkedList<Element> extends AbstractList<Element>{
 
-    //@ ensures \result.size == 0;
+    private int size;
+    private Node header;
+
     public LinkedList () {
         size = 0;
-        first = null;
+        header = null;
     }
 
+    @Override
+    public boolean remove(Object o) {
+        int index = indexOf(o);
+
+        if(index > 0) {
+            Node prev = getNode(index - 1);
+            Node toRemove = getNode(index);
+
+            prev.next = toRemove.next;
+        }
+        else {
+            header = header.next;
+        }
+
+        size--;
+        return true;
+    }
+
+    @Override
+    public Element remove(int index) {
+        Node toRemove = getNode(index);
+        Node next = toRemove.next;
+
+        if(index == 0) {
+            header = next;
+        }
+
+        size--;
+        return toRemove.element;
+    }
+
+    @Override
     public void add(int index, Element element) {
         Node newNode = new Node(element);
-        if (index == 0) {
-            newNode.next = first;
-            first = newNode;
-        } else {
-            Node p = getNode(index-1);
-            newNode.next = p.next;
-            p.next = newNode;
+
+        if (size() == 0) {
+            header = newNode;
+            header.next = header;
         }
-        size = size + 1;
+        else {
+            if (index == 0) {
+                newNode.next = header;
+                header = newNode;
+            } else {
+                Node n = getNode(index - 1);
+                newNode.next = n.next;
+                n.next = newNode;
+            }
+        }
+
+        size++;
     }
 
-    //@ ensures this.size == \old(size) - 1;
-    public void remove(Element element) {
-        // TODO: implement, see exercise P-4.18
-    }
-
-    public Node findBefore(Element element) {
-        // TODO: implement, see exercise P-4.18
-        return null;
-    }
-
-    //@ requires 0 <= index && index < this.size();
+    @Override
     public Element get(int index) {
-        Node p = getNode(index);
-        return p.element;
-    }
+        Node n = header;
 
-    //@ requires 0 <= i && i < this.size();
-    private /*@ pure @*/ Node getNode(int i) {
-        Node p = first;
-        int pos = 0;
-        while (pos != i) {
-            p = p.next;
-            pos = pos + 1;
+        for (int i = 0; i < index; i++) {
+            n = n.next;
         }
-        return p;
+
+        return n.element;
     }
 
-    //@ ensures \result >= 0;
-    public /*@ pure @*/ int size() {
+    public Node getNode(int index) {
+        Node n = header;
+
+        for (int i = 0; i < index; i++) {
+            n = n.next;
+        }
+
+        return n;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+
+        // return place in list
+        for (int i = 0; i < this.size(); i++) {
+            if (this.get(i).equals(o)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    @Override
+    public int size() {
         return size;
     }
 
     public class Node {
-        private Element element;
-        public Node next;
+        Element element;
+        Node next;
 
-        public Node(Element element) {
-            this.element = element;
+        public Node(Element e) {
+            this.element = e;
             this.next = null;
         }
 
         public Element getElement() {
-            return element;
+            return this.element;
         }
+    }
+
+    public Node findBefore(Element e) {
+        int index = indexOf(e);
+
+        if (index - 1 > -1) {
+            return getNode(index - 1);
+        }
+
+        return null;
     }
 }
