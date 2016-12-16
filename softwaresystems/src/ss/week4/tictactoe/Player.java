@@ -1,5 +1,7 @@
 package ss.week4.tictactoe;
 
+import java.util.Scanner;
+
 /**
  * Abstract class for keeping a player in the Tic Tac Toe game. Module 2 lab
  * assignment.
@@ -14,7 +16,7 @@ public abstract class Player {
 
     private String name;
     private Mark mark;
-
+    Scanner scanner;
     // -- Constructors -----------------------------------------------
 
     /*@
@@ -77,5 +79,4 @@ public abstract class Player {
         int keuze = determineMove(board);
         board.setField(keuze, getMark());
     }
-
 }

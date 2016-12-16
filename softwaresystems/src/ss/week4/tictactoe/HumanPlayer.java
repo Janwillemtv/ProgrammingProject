@@ -22,7 +22,10 @@ public class HumanPlayer extends Player {
      * Creates a new human player object.
      * 
      */
+    private Scanner scanner;
+
     public HumanPlayer(String name, Mark mark) {
+
         super(name, mark);
     }
 
@@ -66,18 +69,20 @@ public class HumanPlayer extends Player {
     private int readInt(String prompt) {
         int value = 0;
         boolean intRead = false;
-        @SuppressWarnings("resource")
-        Scanner line = new Scanner(System.in);
+        //@SuppressWarnings("resource")
+        //Scanner line = new Scanner(System.in);
         do {
             System.out.print(prompt);
-            try (Scanner scannerLine = new Scanner(line.nextLine());) {
-                if (scannerLine.hasNextInt()) {
-                    intRead = true;
-                    value = scannerLine.nextInt();
-                }
+            value = scanner.hasNextInt() ? scanner.nextInt() : -1;
+            if (value != -1) {
+                intRead = true;
             }
-        } while (!intRead);
-        return value;
-    }
+        }while (!intRead);
 
+            return value;
+        }
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
 }

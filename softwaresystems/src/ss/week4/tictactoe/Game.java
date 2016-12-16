@@ -39,6 +39,8 @@ public class Game {
      */
     private int current;
 
+    private Scanner scanner;
+
     // -- Constructors -----------------------------------------------
 
     /*@
@@ -75,6 +77,7 @@ public class Game {
             play();
             doorgaan = readBoolean("\n> Play another time? (y/n)?", "y", "n");
         }
+        scanner.close();
     }
 
     /**
@@ -95,9 +98,7 @@ public class Game {
         String answer;
         do {
             System.out.print(prompt);
-            try (Scanner in = new Scanner(System.in)) {
-                answer = in.hasNextLine() ? in.nextLine() : null;
-            }
+            answer = scanner.hasNextLine() ? scanner.nextLine() : null;
         } while (answer == null || (!answer.equals(yes) && !answer.equals(no)));
         return answer.equals(yes);
     }
@@ -119,7 +120,18 @@ public class Game {
      */
     private void play() {
         // TODO: implement, see P-4.20
+        update();
+
+        do {
+            Player currentPlayer = (current == 0) ? players[0] : players[1];
+            int choice = currentPlayer.determineMove(board);
+            board.setField(choice, currentPlayer.getMark());
+            current = (current == 0) ? 1 : 0;
+            update();
+        } while (!board.gameOver());
+        printResult();
     }
+
 
     /**
      * Prints the game situation.
@@ -145,5 +157,9 @@ public class Game {
         } else {
             System.out.println("Draw. There is no winner!");
         }
+    }
+
+    public void setScanner (Scanner scanner) {
+        this.scanner = scanner;
     }
 }
