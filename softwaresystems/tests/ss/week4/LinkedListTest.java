@@ -1,4 +1,4 @@
-/*package ss.week4;
+package ss.week4;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,4 +51,3 @@ public class LinkedListTest {
         assertEquals(list.size(), 2);
     }
 }
-*/

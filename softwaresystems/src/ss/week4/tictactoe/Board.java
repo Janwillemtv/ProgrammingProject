@@ -84,7 +84,7 @@ public class Board {
     /*@pure*/
     public boolean isField(int row, int col) {
     	// TODO: implement, see exercise P-4.18
-        return(0 <= row && row <DIM ** 0 <=col && col < DIM);
+        return(0 <= row && row <DIM && 0 <=col && col < DIM);
     }
     
     /**
@@ -131,7 +131,8 @@ public class Board {
     /*@pure*/
     public boolean isEmptyField(int i) {
     	// TODO: implement, see exercise P-4.18
-        return (getField(i) == Mark.Empty);
+
+        return (getField(i) == Mark.EMPTY);
        // return false;
     }
 
@@ -149,7 +150,7 @@ public class Board {
     /*@pure*/
     public boolean isEmptyField(int row, int col) {
     	// TODO: implement, see exercise P-4.18
-        return (getField(index(row, col)) == Mark.Empty);
+        return (getField(index(row, col)) == Mark.EMPTY);
     }
 
     /**
@@ -162,7 +163,7 @@ public class Board {
     public boolean isFull() {
     	// TODO: implement, see exercise P-4.18
         for (int i = 0; i < DIM*DIM; i++) {
-            if (this.getField(i) == Mark.Empty) {
+            if (this.getField(i) == Mark.EMPTY) {
                 return false;
             }
         }
@@ -179,7 +180,7 @@ public class Board {
     /*@pure*/
     public boolean gameOver() {
     	// TODO: implement, see exercise P-4.18
-        return isFull || hasWinner();
+        return isFull() || hasWinner();
     }
 
     /**
@@ -253,7 +254,7 @@ public class Board {
     /*@ pure */
     public boolean isWinner(Mark m) {
     	// TODO: implement, see exercise P-4.18
-        return (hasRow(m) || hasCollumn(m) || hasDiagonal(m));
+        return (hasRow(m) || hasColumn(m) || hasDiagonal(m));
         //return false;
     }
 
@@ -302,10 +303,10 @@ public class Board {
                                 this.getField(i) == Mark.EMPTY); @*/
     public void reset() {
     	// TODO: implement, see exercise P-4.18
-        fields = new Mark[Dim * DIM];
+        fields = new Mark[DIM * DIM];
 
         for (int i =0; i< DIM * DIM; i++) {
-            fields[i] = Mark.EE;
+            fields[i] = Mark.EMPTY;
         }
     }
 
