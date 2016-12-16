@@ -19,7 +19,7 @@ public class DoublyLinkedList<Element> {
     //@ ensures this.getNode(index).equals(element);
     public void add(int index, Element element) {
         // TODO: implement, see exercise P-4.17
-
+      //  Node newNode = new Node(element);
     }
 
     //@ requires 0 <= index && index < this.size;
