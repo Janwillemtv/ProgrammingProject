@@ -1,4 +1,4 @@
-package ss.week4.tictactoe;
+package ss.week5.tictactoe;
 
 /**
  * Game student for the Tic Tac Toe game. Module 2 lab assignment.
@@ -42,7 +42,7 @@ public class Board {
     public Board deepCopy() {
     	// TODO: implement, see exercise P-4.18
         Board b = new Board();
-
+        b.reset();
         for (int i =0; i< DIM*DIM; i++) {
             b.setField(i, fields[i]);
         }
@@ -71,7 +71,7 @@ public class Board {
     /*@pure*/
     public boolean isField(int index) {
     	// TODO: implement, see exercise P-4.18
-        return(index >= 0 && index < DIM*3);
+        return(index >= 0 && index < DIM*DIM);
 
     }
 
@@ -86,7 +86,11 @@ public class Board {
     	// TODO: implement, see exercise P-4.18
         return(0 <= row && row <DIM && 0 <=col && col < DIM);
     }
-    
+
+    public int size() {
+        return DIM * DIM;
+    }
+
     /**
      * Returns the content of the field i.
      *
@@ -118,9 +122,6 @@ public class Board {
     	// TODO: implement, see exercise P-4.18
         return fields[(row *DIM) + col];
     }
-    public int size() {
-        return DIM * DIM;
-    }
 
     /**
      * Returns true if the field i is empty.
@@ -135,7 +136,7 @@ public class Board {
     public boolean isEmptyField(int i) {
     	// TODO: implement, see exercise P-4.18
 
-        return (getField(i) == Mark.EMPTY);
+        return (getField(i) == Mark.EE);
        // return false;
     }
 
@@ -153,7 +154,7 @@ public class Board {
     /*@pure*/
     public boolean isEmptyField(int row, int col) {
     	// TODO: implement, see exercise P-4.18
-        return (getField(index(row, col)) == Mark.EMPTY);
+        return (getField(index(row, col)) == Mark.EE);
     }
 
     /**
@@ -166,7 +167,7 @@ public class Board {
     public boolean isFull() {
     	// TODO: implement, see exercise P-4.18
         for (int i = 0; i < DIM*DIM; i++) {
-            if (this.getField(i) == Mark.EMPTY) {
+            if (this.getField(i) == Mark.EE) {
                 return false;
             }
         }
@@ -309,7 +310,7 @@ public class Board {
         fields = new Mark[DIM * DIM];
 
         for (int i =0; i< DIM * DIM; i++) {
-            fields[i] = Mark.EMPTY;
+            fields[i] = Mark.EE;
         }
     }
 

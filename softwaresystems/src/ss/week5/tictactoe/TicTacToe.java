@@ -1,7 +1,6 @@
-package ss.week4.tictactoe;
+package ss.week5.tictactoe;
 
 import java.util.Scanner;
-import java.io.IOException;
 
 /**
  * Executable class for the game Tic Tac Toe. The game can be played against the
@@ -15,14 +14,23 @@ public class TicTacToe {
         // TODO: implement, see P-4.21
     Scanner scanner = new Scanner(System.in);
 
-    String name1 = (args.length > 0 && args[0] != null) ? args[0] : "Jij";
-    String name2 = (args.length > 1 && args[1] != null) ? args[1] : "Ik";
+    String name1 = (args.length > 0 && args[0] != null) ? args[0] : "Speler 1";
+    String name2 = (args.length > 1 && args[1] != null) ? args[1] : "-N";
 
     HumanPlayer p1 = new HumanPlayer(name1, Mark.XX);
     p1.setScanner(scanner);
-
-    HumanPlayer p2 = new HumanPlayer(name2, Mark.OO);
-    p2.setScanner(scanner);
+    Player p2;
+    switch(name2) {
+        case "-N":
+            p2 = new ComputerPlayer(name2, Mark.OO);
+            break;
+        default:
+            p2 = new HumanPlayer(name2, Mark.OO);
+            p2.setScanner(scanner);
+            break;
+    }
+    //HumanPlayer p2 = new HumanPlayer(name2, Mark.OO);
+    //p2.setScanner(scanner);
 
     Game game = new Game(p1, p2);
     game.setScanner(scanner);
