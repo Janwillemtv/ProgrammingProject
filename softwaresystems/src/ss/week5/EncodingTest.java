@@ -12,7 +12,13 @@ import org.apache.commons.codec.binary.Hex;
 public class EncodingTest {
     public static void main(String[] args) throws DecoderException {
         String input = "Hello World";
+        String encoded = Hex.encodeHexString(input.getBytes());
+        System.out.println(encoded);
 
-        System.out.println(Hex.encodeHexString(input.getBytes()));
+        byte[] output = Hex.decodeHex(encoded.toCharArray());
+        String outputDecoded = new String(output);
+        System.out.println(outputDecoded);
+
+
     }
 }
