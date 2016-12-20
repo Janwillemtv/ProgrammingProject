@@ -11,8 +11,12 @@ import org.apache.commons.codec.binary.Hex;
 
 public class EncodingTest {
     public static void main(String[] args) throws DecoderException {
+        String hexString = "010203040506";
         String input = "Hello World";
 
         System.out.println(Hex.encodeHexString(input.getBytes()));
+
+        String encoded = Hex.encodeHexString(input.getBytes());
+
     }
 }
