@@ -19,6 +19,5 @@ public class EncodingTest {
         String outputDecoded = new String(output);
         System.out.println(outputDecoded);
 
-
     }
 }
