@@ -11,12 +11,14 @@ import org.apache.commons.codec.binary.Hex;
 
 public class EncodingTest {
     public static void main(String[] args) throws DecoderException {
-        String hexString = "010203040506";
         String input = "Hello World";
-
-        System.out.println(Hex.encodeHexString(input.getBytes()));
-
         String encoded = Hex.encodeHexString(input.getBytes());
+        System.out.println(encoded);
+
+        byte[] output = Hex.decodeHex(encoded.toCharArray());
+        String outputDecoded = new String(output);
+        System.out.println(outputDecoded);
+
 
     }
 }
