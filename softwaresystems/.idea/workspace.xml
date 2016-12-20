@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8651a929-0137-4419-8ebf-6f707fa8a62c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/EncodingTest.java" afterPath="$PROJECT_DIR$/src/ss/week5/EncodingTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1235,7 +1234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482226247260</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Naive player is geadd">
+      <created>1482227163159</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1482227163159</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
