@@ -12,6 +12,7 @@ public class ComputerPlayer extends Player {
 
     public ComputerPlayer(String n, Mark m, int difficulty) {
         this(n, m);
+
         this.difficulty = difficulty;
     }
     public ComputerPlayer(String n, Mark m) {

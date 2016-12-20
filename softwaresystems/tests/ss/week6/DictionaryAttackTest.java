@@ -1,4 +1,4 @@
-package ss.week6.test;
+package ss.week6;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,13 +24,17 @@ public class DictionaryAttackTest {
     private static final String PATH = ""; //Your path to the test folder
 
     @Before
-    public void setUp() {
+   /* public void setUp() {
         dictionaryAttack = new DictionaryAttack();
         try {
             dictionaryAttack.readPasswords(PATH + "LeakedPasswords.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }*/
+    public void setUp() throws IOException {
+        dictionaryAttack = new DictionaryAttack();
+        dictionaryAttack.readPasswords(PATH + "LeakedPasswords.txt");
     }
 
     /**

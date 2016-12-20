@@ -1,4 +1,4 @@
-package ss.week6.test;
+package ss.week6;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,6 +32,7 @@ public class ArgumentExceptionTest {
     public void testTooFewArgumentsException() {
         TooFewArgumentsException exception = new TooFewArgumentsException();
         assertTrue(exception instanceof WrongArgumentException);
+        System.out.println(wrongArgumentException.getMessage());
         assertFalse(exception.getMessage().equals(wrongArgumentException.getMessage()));
     }
 
