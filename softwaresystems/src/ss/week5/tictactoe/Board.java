@@ -8,8 +8,8 @@ package ss.week5.tictactoe;
  */
 public class Board {
     public static final int DIM = 3;
-    private static final String[] NUMBERING = {" 0 | 1 | 2 ", "---+---+---",
-        " 3 | 4 | 5 ", "---+---+---", " 6 | 7 | 8 "};
+    private static final String[] NUMBERING = {" 0 | 1 | 2 ", " ---+---+---",
+        " 3 | 4 | 5 ", " ---+---+---", " 6 | 7 | 8 "};
     private static final String LINE = NUMBERING[1];
     private static final String DELIM = "     ";
 

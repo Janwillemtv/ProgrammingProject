@@ -14,14 +14,14 @@ public class TicTacToe {
         // TODO: implement, see P-4.21
     Scanner scanner = new Scanner(System.in);
 
-    String name1 = (args.length > 0 && args[0] != null) ? args[0] : "Speler 1";
-    String name2 = (args.length > 1 && args[1] != null) ? args[1] : "-N";
-
+    String name1 = (args.length > 0 && args[0] != null) ? args[0] : "Tom";
+    String name2 = (args.length > 1 && args[1] != null) ? args[1] : "Smart";
     HumanPlayer p1 = new HumanPlayer(name1, Mark.XX);
+    //ComputerPlayer p1 = new ComputerPlayer(name1, Mark.XX);
     p1.setScanner(scanner);
     Player p2;
     switch(name2) {
-        case "-N":
+        case "-N": case "Smart": case "HAL9000":
             p2 = new ComputerPlayer(name2, Mark.OO);
             break;
         default:

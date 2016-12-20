@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8651a929-0137-4419-8ebf-6f707fa8a62c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/HumanPlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/Mark.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/NaiveStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/Strategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/TicTacToe.java" />
+    <list default="true" id="8651a929-0137-4419-8ebf-6f707fa8a62c" name="Default" comment="Naive player is geadd">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/SmartStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/SuperStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwaresystems.iml" afterPath="$PROJECT_DIR$/softwaresystems.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week4/tictactoe/Board.java" afterPath="$PROJECT_DIR$/src/ss/week4/tictactoe/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week4/tictactoe/TicTacToe.java" afterPath="$PROJECT_DIR$/src/ss/week4/tictactoe/TicTacToe.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/EncodingTest.java" afterPath="$PROJECT_DIR$/src/ss/week5/EncodingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/HumanPlayer.java" afterPath="$PROJECT_DIR$/src/ss/week5/HumanPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/tictactoe/NaiveStrategy.java" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/NaiveStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ss/week5/tictactoe/TicTacToe.java" afterPath="$PROJECT_DIR$/src/ss/week5/tictactoe/TicTacToe.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,9 +42,26 @@
       <file leaf-file-name="NaiveStrategy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/NaiveStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="242">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmartStrategy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/SmartStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding>
+                <element signature="e#192#193#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
                 <element signature="e#254#255#0" expanded="true" />
                 <element signature="e#289#290#0" expanded="true" />
               </folding>
@@ -59,10 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SuperStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/SuperStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2772">
+            <state relative-caret-position="2486">
               <caret line="126" column="58" lean-forward="true" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
               <folding />
             </state>
@@ -72,8 +95,8 @@
       <file leaf-file-name="TicTacToe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="506">
+              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -82,8 +105,8 @@
       <file leaf-file-name="ComputerPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -112,18 +135,8 @@
       <file leaf-file-name="Mark.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Mark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="376">
               <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HumanPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/HumanPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1586">
-              <caret line="83" column="13" lean-forward="true" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -132,11 +145,11 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
-              <caret line="312" column="31" lean-forward="false" selection-start-line="312" selection-start-column="31" selection-end-line="312" selection-end-column="31" />
+            <state relative-caret-position="2024">
+              <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
               <folding>
-                <element signature="e#2760#2761#0" expanded="true" />
-                <element signature="e#2792#2793#0" expanded="true" />
+                <element signature="e#2762#2763#0" expanded="true" />
+                <element signature="e#2794#2795#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,11 +208,13 @@
         <option value="$PROJECT_DIR$/src/ss/week5/EncodingTest.java" />
         <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/Player.java" />
         <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/HumanPlayer.java" />
+        <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/Mark.java" />
+        <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java" />
         <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/TicTacToe.java" />
         <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java" />
         <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/NaiveStrategy.java" />
-        <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/Mark.java" />
-        <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java" />
+        <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/SmartStrategy.java" />
+        <option value="$PROJECT_DIR$/src/ss/week5/tictactoe/SuperStrategy.java" />
       </list>
     </option>
   </component>
@@ -235,6 +250,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="softwaresystems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="softwaresystems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="softwaresystems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="week5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -978,7 +1015,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481891602882</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tic Tac Toe doet t">
+      <created>1482172934643</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1482172934643</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1015,7 +1059,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1026,7 +1070,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35509735" sideWeight="0.5037244" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3510759" sideWeight="0.4962756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3510759" sideWeight="0.4962756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31030577" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1069,22 +1113,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ss/week4/math/Polynomial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ss/week4/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/ss/week4/DoublyLinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1130">
@@ -1445,10 +1473,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Mark.java">
+    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="2486">
+          <caret line="126" column="58" lean-forward="true" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1469,49 +1497,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Mark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="376">
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="506">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/ComputerPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/NaiveStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state relative-caret-position="242">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="312" column="31" lean-forward="false" selection-start-line="312" selection-start-column="31" selection-end-line="312" selection-end-column="31" />
+        <state relative-caret-position="2024">
+          <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
           <folding>
-            <element signature="e#2760#2761#0" expanded="true" />
-            <element signature="e#2792#2793#0" expanded="true" />
+            <element signature="e#2762#2763#0" expanded="true" />
+            <element signature="e#2794#2795#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/SuperStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2772">
-          <caret line="126" column="58" lean-forward="true" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ss/week5/tictactoe/SmartStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
