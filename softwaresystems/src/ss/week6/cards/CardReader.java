@@ -17,6 +17,7 @@ import java.io.PrintWriter;
 /**
  * Testclass for input and output of Card.
  */
+/*
 public class CardReader {
 	private static BufferedReader reader;
 	private static PrintWriter writer;
@@ -128,3 +129,4 @@ public class CardReader {
 		close();
 	}
 }
+*/

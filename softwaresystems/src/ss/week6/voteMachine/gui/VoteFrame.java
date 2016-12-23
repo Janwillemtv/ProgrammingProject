@@ -1,3 +1,4 @@
+/*
 package ss.week6.voteMachine.gui;
 
 import java.awt.BorderLayout;
@@ -26,6 +27,7 @@ public class VoteFrame extends JFrame {
 	 * 
 	 * @require uitslag != null
 	 */
+/*
 	public VoteFrame(VoteGUIView view) {
 		// Initialisation of graphical components
 		super("Voting");
@@ -76,6 +78,7 @@ public class VoteFrame extends JFrame {
 	 * Ververst de lijst partijen in de <code>Choice</code> op basis van de
 	 * waargenomen verandering in de <code>Uitslag</code>
 	 */
+/*
 	public void update(List<String> parties) {
 		partyChoice.setEnabled(false);
 		partyChoice.removeAllItems();
@@ -86,3 +89,4 @@ public class VoteFrame extends JFrame {
 		partyChoice.setEnabled(true);
 	}
 }
+*/

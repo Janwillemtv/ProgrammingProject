@@ -13,6 +13,21 @@ public class Zipper {
         }
         return result;
     }
+    public static String zip2(String s1, String s2) {
+        String result = "";
+        Exception e;
+        if (s1 == null || s2 == null) {
+            e = new TooFewArgumentsException();
+        } else if (s1.length() != s2.length()) {
+            e = new ArgumentLengthsDifferException(s1.length(), s2.length());
+        } else {
+            for (int i = 0; i < s1.length(); i++) {
+                result += Character.toString(s1.charAt(i))
+                        + Character.toString(s2.charAt(i));
+            }
+        }
+        return result;
+    }
     
 
     public static void main(String[] args) {

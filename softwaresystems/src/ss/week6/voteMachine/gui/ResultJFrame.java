@@ -1,3 +1,4 @@
+/*
 package ss.week6.voteMachine.gui;
 
 import java.awt.Container;
@@ -19,6 +20,8 @@ import ss.week6.voteMachine.VoteList;
  * @author  Arend Rensink en Theo Ruys
  * @version 2005.02.15
  */
+
+/*
 public class ResultJFrame extends JFrame {
 	// Grafische componenten
 	private JTextArea resultField;
@@ -27,6 +30,8 @@ public class ResultJFrame extends JFrame {
 
 
 	/** Construeert een UitslagJFrame die een gegeven uitslag observeert. */
+
+/*
 	public ResultJFrame(VoteGUIView view) {
 		// Initialisatie grafische componenten
 		super("Result");
@@ -45,6 +50,8 @@ public class ResultJFrame extends JFrame {
 	}
 
 	/** Zet de uitslag op het tekstveld, met 1 regel per partij. */
+
+/*
 	public void update(Map<String,Integer> votes) {
 		resultField.setText("");
 
@@ -53,4 +60,4 @@ public class ResultJFrame extends JFrame {
 		}
 
 	}
-}
+} */

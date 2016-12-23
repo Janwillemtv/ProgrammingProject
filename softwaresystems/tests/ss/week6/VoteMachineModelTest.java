@@ -1,4 +1,5 @@
-/*package ss.week6.test;
+/*
+package ss.week6.test;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,11 +19,9 @@ import static org.junit.Assert.*;
 /*
 public class VoteMachineModelTest {
 
-    /** Testvariabele for a <tt>PartyList</tt> object. */
-/*
+    // Testvariabele for a <tt>PartyList</tt> object.
     private PartyList partyList;
-    /** Testvariabele for a <tt>VoteList</tt> object. */
-/*
+    // Testvariabele for a <tt>VoteList</tt> object.
     private VoteList voteList;
 
     public static final String PARTY1 = "Party 1";
@@ -35,8 +34,7 @@ public class VoteMachineModelTest {
         voteList = new VoteList();
     }
 
-    /** Test for the class <tt>PartyList</tt>.*/
-/*
+    //Test for the class <tt>PartyList</tt>.
     @Test
     public void partyListTest() {
         partyList.addParty(PARTY1);
@@ -47,8 +45,7 @@ public class VoteMachineModelTest {
         assertEquals(2, partyList.getParties().size());
     }
 
-    /** Test for the class <tt>VoteList</tt>.*/
-/*
+    // Test for the class <tt>VoteList</tt>.
     @Test
     public void voteListTest() {
         assertTrue(voteList.getVotes() instanceof Map);
