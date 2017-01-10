@@ -1,5 +1,5 @@
-/*
-package ss.week6.test;
+
+package ss.week6;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
  * @author Jip Spel
  * @version $Revision: 1.0 $
  */
-/*
+
 public class VoteMachineModelTest {
 
     // Testvariabele for a <tt>PartyList</tt> object.
@@ -55,4 +55,3 @@ public class VoteMachineModelTest {
         assertEquals(1, (int) voteList.getVotes().get(PARTY1));
     }
 }
-*/

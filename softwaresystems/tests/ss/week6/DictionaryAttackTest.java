@@ -37,6 +37,7 @@ public class DictionaryAttackTest {
             e.printStackTrace();
         }
     }*/
+/*
     public void setUp() throws IOException {
         dictionaryAttack = new DictionaryAttack();
         dictionaryAttack.readPasswords(PATH + "LeakedPasswords.txt");
