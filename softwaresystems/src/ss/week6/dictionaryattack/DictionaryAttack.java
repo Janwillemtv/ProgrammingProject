@@ -113,6 +113,29 @@ public class DictionaryAttack {
 	/**
 	 * Do the dictionary attack.
 	 */
+	public String BruteForceAttack(int digits, String name) {
+	    String check = "";
+	    check += (byte)0;
+	    int loc = 1;
+	    while (check.length() <= digits) {
+	        for (int i = 0; i < 255; i++) {
+	            String checkString = check + byte (i);
+	            if ((byte) check.charAt(check.length()) == 255) {
+	                //do nothing yet
+                }
+            }
+        }
+    }
+    private long loopAmount(int index) {
+	    if (index == 0) {
+	        return 0;
+        }
+	    int loops = 256;
+	    for (int i =0; i < index-1; i++) {
+	        loops *= 256;
+        }
+        return loops -= 1;
+    }
 	public void doDictionaryAttack() {
 		// To implement
         int i =0;
@@ -145,6 +168,9 @@ public class DictionaryAttack {
 		}
 		da.readPasswords(PATH + "Passwords.txt");
 		da.doDictionaryAttack();
+		//int a = (int) da.loopAmount(0);
+		System.out.println((int)da.loopAmount(0));
+		System.out.println((int)da.loopAmount(2));
 	}
 
 }
