@@ -1,5 +1,7 @@
 package ss.week6.cards;
 
+import java.io.*;
+
 public class Card
 {
 
@@ -320,4 +322,111 @@ public class Card
 	public boolean isInRankBefore(Card card) {
 		return isRankFollowing(this.getRank(), card.getRank());
 	}
+
+	public void write(PrintWriter pw) {
+		pw.println(this.toString());
+		pw.flush();
+	}
+
+	public void write(DataOutput out) throws IOException {
+		try {
+			out.writeChars(this.getSuit() + "" + this.getRank() + "\n");
+		} catch (IOException ioe) {
+			throw ioe;
+		}
+	}
+
+	public void write(ObjectOutput out) throws IOException {
+		try {
+			out.writeObject(this);
+			out.flush();
+		} catch (IOException ioe) {
+			throw ioe;
+		}
+	}
+
+	public static Card read(BufferedReader in) throws EOFException {
+		try {
+			String line = in.readLine();
+
+			if (line != null) {
+				String[] split = line.split("\\s+");
+
+				if(split.length == 2) {
+					char suit = Card.suitString2Char(split[0]);
+					char rank = Card.rankString2Char(split[1]);
+
+					if(isValidRank(rank) && isValidSuit(suit)) {
+						return new Card(suit, rank);
+					}
+				}
+
+				return null;
+			} else {
+				throw new EOFException();
+			}
+		} catch (IOException ioe) {
+			throw new EOFException();
+		}
+	}
+
+	public static Card read(DataInput in) throws EOFException {
+		try {
+			String line = in.readLine();
+
+			if (line != null) {
+				char suit = line.charAt(1);
+				char rank = line.charAt(3);
+
+				if(isValidRank(rank) && isValidSuit(suit)) {
+					return new Card(suit, rank);
+				}
+
+				return null;
+			} else {
+				throw new EOFException();
+			}
+		} catch (IOException ioe) {
+			throw new EOFException();
+		}
+	}
+
+	public static Card read(ObjectInput in) throws EOFException {
+		try {
+			Card c = (Card) in.readObject();
+
+			if (c != null) {
+				return c;
+			} else {
+				throw new EOFException();
+			}
+
+		} catch (ClassNotFoundException | IOException exc) {
+			throw new EOFException();
+		}
+	}
+
+	public static void main(String[] args) {
+		PrintWriter pw;
+
+		if(args.length > 0) {
+			try {
+				pw = new PrintWriter(args[0]);
+			} catch (IOException ioe) {
+				pw = new PrintWriter(System.out);
+				ioe.printStackTrace();
+			}
+		} else {
+			pw = new PrintWriter(System.out);
+		}
+
+		Card c1 = new Card(SPADES, ACE);
+		Card c2 = new Card(HEARTS, KING);
+		Card c3 = new Card(CLUBS, TEN);
+
+		c1.write(pw);
+		c2.write(pw);
+		c3.write(pw);
+	}
 }
+
