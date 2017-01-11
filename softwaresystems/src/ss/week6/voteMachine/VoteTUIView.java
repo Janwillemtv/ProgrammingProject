@@ -29,6 +29,7 @@ public class VoteTUIView implements VoteView, Observer{
                             //Vote for the party
                             String party = word[1];
                             controller.vote(party);
+                            System.out.println("you have voted for: " + word[1]);
                         }else showError("Invalid Command");
                         break;
                     case "ADD":
@@ -36,6 +37,7 @@ public class VoteTUIView implements VoteView, Observer{
                             if(word.length == 3) {
                                 String party = word[2];
                                 controller.addParty(party);
+                                System.out.println("Added party " + party);
                             }else showError("Invalid Command");
                         }
                         break;

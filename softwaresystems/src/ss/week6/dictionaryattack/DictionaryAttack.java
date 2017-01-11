@@ -119,12 +119,13 @@ public class DictionaryAttack {
 	    int loc = 1;
 	    while (check.length() <= digits) {
 	        for (int i = 0; i < 255; i++) {
-	            String checkString = check + byte (i);
+	           // String checkString = check + byte (i);
 	            if ((byte) check.charAt(check.length()) == 255) {
 	                //do nothing yet
                 }
             }
         }
+        return null;
     }
     private long loopAmount(int index) {
 	    if (index == 0) {
@@ -149,7 +150,9 @@ public class DictionaryAttack {
 
 			if (hashDictionary.containsKey(passwordHash)) {
 				System.out.println("User: " + user + " Password: " + hashDictionary.get(passwordHash));
-			}
+			} else {
+			    //do nothing
+            }
 		}
 		System.out.println(i);
 	}

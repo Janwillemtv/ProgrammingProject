@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Hello {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        System.out.print("Hello");
+        System.out.print("Hello, what is your name?");
         while(in.hasNext()){
-            System.out.print(" " + in.next());
+            System.out.print("Hello " + in.next());
         }
 
     }
