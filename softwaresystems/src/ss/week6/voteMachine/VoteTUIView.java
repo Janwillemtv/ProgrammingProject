@@ -79,6 +79,10 @@ public class VoteTUIView implements VoteView, Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-
+        if (arg.equals("vote")) {
+            System.out.println("Vote was added");
+        } else if (arg.equals("party")) {
+            System.out.println("Party was added");
+        }
     }
 }
