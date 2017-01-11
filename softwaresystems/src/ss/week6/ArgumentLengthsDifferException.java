@@ -5,14 +5,14 @@ package ss.week6;
  */
 public class ArgumentLengthsDifferException extends WrongArgumentException {
     private int l1, l2;
+    ArgumentLengthsDifferException(int a, int b) {
+        l1 = a;
+        l2 = b;
+    }
+
     public String getMessage() {
         return "error: length of command line arguments "
                 + "differs (" + l1 + ", " + l2 + ")";
     }
-    ArgumentLengthsDifferException(int a, int b) {
-        l1 = a;
-        l2 = b;
-        System.out.println("error: length of command line arguments "
-                + "differs (" + a + ", " + b + ")");
-    }
+
 }
