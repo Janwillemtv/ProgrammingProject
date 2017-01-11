@@ -121,7 +121,7 @@ public class DictionaryAttack {
 			String user = entry.getKey();
 			//System.out.println("here now");
 			String passwordHash = entry.getValue();
-			System.out.println("");
+			//System.out.println("");
 			i++;
 
 			if (hashDictionary.containsKey(passwordHash)) {

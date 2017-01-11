@@ -6,6 +6,6 @@ package ss.week7.challenge.chatbox;
  * @author  Theo Ruys
  * @version 2005.02.21
  */
-interface MessageUI {
+public interface MessageUI {
 	public void addMessage(String msg);
 }
