@@ -1,4 +1,4 @@
-/*
+
 package ss.week6.voteMachine.gui;
 
 import java.util.List;
@@ -89,4 +89,4 @@ public class VoteGUIView implements VoteView {
 		}
 		return result;
 	}
-} */
+}
