@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.ListIterator;
 
-import javax.swing.JPanel;
+
+import javax.swing.*;
 
 /**
  * BallPanel a special JPanel for drawing balls on.
@@ -17,7 +18,12 @@ public class BallPanel extends JPanel implements ActionListener {
 	private List<Ball> balls; // @invariant balls != null
 
 	public BallPanel() {
+
 		balls = new java.util.ArrayList<Ball>();
+		//Thread UPDATE = new AnimateThread();
+		//UPDATE.start();
+		Timer timer = new Timer(10, this);
+		timer.start();
 	}
 
 	/**
@@ -76,6 +82,13 @@ public class BallPanel extends JPanel implements ActionListener {
 		super.paintComponent(g);
 		for (Ball b : balls) {
 			b.draw(g);
+		}
+	}
+
+	private class AnimateThread extends Thread {
+
+		public void run() {
+			animate();
 		}
 	}
 }

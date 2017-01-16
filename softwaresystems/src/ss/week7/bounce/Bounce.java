@@ -33,10 +33,12 @@ public class Bounce extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
+
 	public static void main(String[] args) {
 		JFrame f = new Bounce();
 		f.setLocation(200, 200);
 		f.setSize(300, 200);
 		f.setVisible(true);
+
 	}
 }
