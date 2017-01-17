@@ -46,25 +46,24 @@ public class Peer implements Runnable {
      * writes the characters to the default output.
      */
     public void run() {
-        String input = "";
+
         while(true) {
             try {
                 if (in.ready()) {
-                    try {
-                        input = in.readLine();
-                        System.out.println(input);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    String msg = in.readLine();
+
+                    if (msg.contains("EXIT")) {
+                        break;
+                    } else {
+                        System.out.println(msg);
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if (input.equals("EXIT")) {
-                shutDown();
-                break;
-            }
         }
+        shutDown();
+
     }
 
 
@@ -88,11 +87,12 @@ public class Peer implements Runnable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                if (lineIn.equals("EXIT")) {
+                if (lineIn.contains("EXIT")) {
                     break;
                 }
             }
         }
+        shutDown();
     }
 
     /**
@@ -114,6 +114,7 @@ public class Peer implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.exit(0);
     }
 
     /**  returns name of the peer object*/
@@ -122,17 +123,16 @@ public class Peer implements Runnable {
     }
 
     /** read a line from the default input */
-    static public String readString(String txt) {
-        System.out.print(txt);
-        String ans = null;
+    static public String readString(String tekst) {
+        System.out.print(tekst);
+        String antw = null;
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     System.in));
-            ans = in.readLine();
+            antw = in.readLine();
         } catch (IOException e) {
-            System.out.println(e);
         }
 
-        return (ans == null) ? "" : ans;
+        return (antw == null) ? "" : antw;
     }
 }
