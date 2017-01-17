@@ -16,6 +16,8 @@ public class IntCell {
         Adder a2 = new Adder(cell, 2);
         a1.start();
         a2.start();
+        //a1.run();
+        //a2.run();
         try {
             a1.join();
             a2.join();
@@ -29,12 +31,23 @@ public class IntCell {
 class Adder extends Thread {
     private IntCell cell;
     private int amount;
+    private boolean adding = false;
 
     public Adder(IntCell cellArg, int amountArg) {
         this.cell = cellArg;
         this.amount = amountArg;
     }
-    public void run() {
+    public synchronized void run() {
+       while(adding) {
+           try {
+               wait();
+               // cell.add(amount);
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+       }
         cell.add(amount);
+        notifyAll();
+        adding = true;
     }
 }
