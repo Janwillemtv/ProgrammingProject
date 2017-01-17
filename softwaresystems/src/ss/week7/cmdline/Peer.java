@@ -46,24 +46,24 @@ public class Peer implements Runnable {
      * writes the characters to the default output.
      */
     public void run() {
-        String input = "";
+
         while(true) {
             try {
                 if (in.ready()) {
-                    try {
-                        input = in.readLine();
-                        System.out.println(input);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    String msg = in.readLine();
+
+                    if (msg.contains("EXIT")) {
+                        break;
+                    } else {
+                        System.out.println(msg);
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if (input.equals("EXIT")) {
-                break;
-            }
         }
+        shutDown();
+
     }
 
 
@@ -78,20 +78,21 @@ public class Peer implements Runnable {
             if (Terminal.hasNextLine()) {
                 lineIn = Terminal.nextLine();
                 System.out.println(lineIn);
-            }
 
 
-            try {
-                out.write(lineIn, 0, lineIn.length());
-                out.newLine();
-                out.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (lineIn.equals("EXIT")) {
-                break;
+                try {
+                    out.write(lineIn, 0, lineIn.length());
+                    out.newLine();
+                    out.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (lineIn.contains("EXIT")) {
+                    break;
+                }
             }
         }
+        shutDown();
     }
 
     /**
@@ -113,6 +114,7 @@ public class Peer implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.exit(0);
     }
 
     /**  returns name of the peer object*/
