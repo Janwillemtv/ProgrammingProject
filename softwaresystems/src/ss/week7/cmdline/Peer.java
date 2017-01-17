@@ -61,6 +61,7 @@ public class Peer implements Runnable {
                 e.printStackTrace();
             }
             if (input.equals("EXIT")) {
+                shutDown();
                 break;
             }
         }
@@ -78,18 +79,18 @@ public class Peer implements Runnable {
             if (Terminal.hasNextLine()) {
                 lineIn = Terminal.nextLine();
                 System.out.println(lineIn);
-            }
 
 
-            try {
-                out.write(lineIn, 0, lineIn.length());
-                out.newLine();
-                out.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (lineIn.equals("EXIT")) {
-                break;
+                try {
+                    out.write(lineIn, 0, lineIn.length());
+                    out.newLine();
+                    out.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (lineIn.equals("EXIT")) {
+                    break;
+                }
             }
         }
     }
@@ -121,16 +122,17 @@ public class Peer implements Runnable {
     }
 
     /** read a line from the default input */
-    static public String readString(String tekst) {
-        System.out.print(tekst);
-        String antw = null;
+    static public String readString(String txt) {
+        System.out.print(txt);
+        String ans = null;
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     System.in));
-            antw = in.readLine();
+            ans = in.readLine();
         } catch (IOException e) {
+            System.out.println(e);
         }
 
-        return (antw == null) ? "" : antw;
+        return (ans == null) ? "" : ans;
     }
 }

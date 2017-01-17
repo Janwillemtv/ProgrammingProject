@@ -59,6 +59,8 @@ public class Server {
             t.interrupt();
 
             sock.close();
+            System.exit(0);
+            //peer.shutDown();
 
         } catch (IOException e) {
             System.out.println("ERROR: could not create a socket on " + addr

@@ -60,6 +60,7 @@ public class Client {
             streamInputHandler.start();
             client.handleTerminalInput();
             client.shutDown();
+            System.exit(0);
         } catch (IOException e) {
             e.printStackTrace();
         }
