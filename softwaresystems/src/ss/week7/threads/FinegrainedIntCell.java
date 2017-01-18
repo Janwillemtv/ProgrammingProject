@@ -15,7 +15,7 @@ public class FinegrainedIntCell implements IntCell {
     private boolean write;
 
     public FinegrainedIntCell(){
-     l =  new ReentrantLock();
+        l =  new ReentrantLock();
         canWrite =  l.newCondition();
         canRead = l.newCondition();
         value = 0;

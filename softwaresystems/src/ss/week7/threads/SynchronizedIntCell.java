@@ -34,9 +34,11 @@ public class SynchronizedIntCell implements IntCell {
             }
         }
        // System.out.println(value);
-        notifyAll();
+
         this.write = false;
+        notifyAll();
         return value;
+
     }
 
 
